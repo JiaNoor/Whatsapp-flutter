@@ -9,13 +9,13 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.teal[600],
         shadowColor: Colors.teal,
-        title: Text(
+        title: const Text(
           "WhatsApp",
           style: TextStyle(
             color: Colors.white,
           ),
         ),
-        actions: [
+        actions: const [
           Icon(Icons.search),
           Icon(Icons.more_vert),
         ],
@@ -25,7 +25,7 @@ class Home extends StatelessWidget {
           children: [
             ListTile(
               tileColor: Colors.teal[600],
-              leading: Icon(
+              leading: const Icon(
                 Icons.camera_alt_rounded,
                 color: Colors.white,
                 size: 20,
@@ -124,13 +124,11 @@ class Home extends StatelessWidget {
 
 Widget chats(String name, String msg, String time, String img, double sz, clr) {
   return ListTile(
-    leading: Container(
-      child: CircleAvatar(
-        radius: 20.0,
-        backgroundColor: Colors.transparent,
-        backgroundImage: NetworkImage(
-          img,
-        ),
+    leading: CircleAvatar(
+      radius: 20.0,
+      backgroundColor: Colors.transparent,
+      backgroundImage: NetworkImage(
+        img,
       ),
     ),
     title: Text(name),
@@ -159,7 +157,7 @@ Widget titlebar(String header) {
     width: 70,
     child: Text(
       header,
-      style: TextStyle(
+      style: const TextStyle(
         color: Colors.white,
         fontSize: 14,
         fontWeight: FontWeight.bold,
